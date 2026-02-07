@@ -1,3 +1,5 @@
+from os import system
+
 logo = r'''
                          ___________
                          \         /
@@ -29,7 +31,7 @@ while(bidding):
   choice = input()
   if choice == "n":
      bidding = False
-
+  system("clear||cls")
 bigest_bid = 0
 
 for key in biders_bid:
