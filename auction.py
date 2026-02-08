@@ -14,7 +14,7 @@ logo = r'''
                       /_______________\\
 '''
 
-#ures dictionary létrehozása, program inic és while feltétel deklarálása
+#ures dictionary létrehozása, program inic és while feltétel deklarálása.
 
 print(f"{logo}\n")
 print("<><><><><><>     Welcome to the auction game!    <><><><><><>")
@@ -22,7 +22,7 @@ print("<><><><><><>     Welcome to the auction game!    <><><><><><>")
 biders_bid = {}
 bidding = True
 
-#
+#Végigkérdezzük a játékosokat egy terminal clear-el követve, hogy ne lássák egymás bidjeit.
 
 while(bidding):
 
@@ -38,10 +38,14 @@ while(bidding):
   system("clear||cls")
 bigest_bid = 0
 
+# Vizsgálat kiderítjük mi a legnagyobb bid és kié.
+
 for key in biders_bid:
     if biders_bid[key] > bigest_bid:
         bigest_bid = biders_bid[key]
-    if biders_bid[key] == bigest_bid:
-        bigest_bidder = key
+        if biders_bid[key] == bigest_bid:
+            bigest_bidder = key
+
+#Végül kiírjuk a győztest.
 
 print(f"And the biggest bid is: ${bigest_bid} from {bigest_bidder}")
