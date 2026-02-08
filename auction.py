@@ -14,11 +14,15 @@ logo = r'''
                       /_______________\\
 '''
 
+#ures dictionary létrehozása, program inic és while feltétel deklarálása
+
 print(f"{logo}\n")
 print("<><><><><><>     Welcome to the auction game!    <><><><><><>")
 
 biders_bid = {}
 bidding = True
+
+#
 
 while(bidding):
 
@@ -37,7 +41,6 @@ bigest_bid = 0
 for key in biders_bid:
     if biders_bid[key] > bigest_bid:
         bigest_bid = biders_bid[key]
-for key in biders_bid:
     if biders_bid[key] == bigest_bid:
         bigest_bidder = key
 
